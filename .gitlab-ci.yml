@@ -1,0 +1,31 @@
+
+variables:
+  ServiceName: "${CI_PROJECT_NAME}"
+  Namespace: "${CI_PROJECT_NAMESPACE}"
+
+
+image: registry.cn-hangzhou.aliyuncs.com/whaless/docker-maven-helm-kubectl-go-tpl-replacer:v1.1
+
+before_script:
+ - cd $CI_PROJECT_DIR
+
+stages:
+  - deploy-file
+
+deploy-file:
+  stage: deploy-file
+  script:
+    - cp -rf main/* /root/deploy/file
+ # when: manual
+
+
+
+
+
+    
+
+
+
+
+
+  
