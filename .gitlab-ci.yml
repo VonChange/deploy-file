@@ -15,7 +15,7 @@ stages:
 deploy-file:
   stage: deploy-file
   script:
-    - mkdir -rf /root/deploy/file
+    - mkdir -p /root/deploy/file
     - cp -rf main/* /root/deploy/file
  # when: manual
 
