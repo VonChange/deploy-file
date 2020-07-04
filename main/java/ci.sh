@@ -2,7 +2,7 @@
 set -x
 # export  MY_COMMIT_SHA=$(git log -1 --pretty=format:"%H" | awk '{print substr($1,1,8)}')
 export DockerImageName=registry.cn-hangzhou.aliyuncs.com/${CI_PROJECT_NAMESPACE}/${CI_PROJECT_NAME}:v${CI_PIPELINE_IID}-${CI_PIPELINE_ID}
-function maven_buid(){
+function maven_build(){
    mvn package -U -DskipTests=true
 }
 
